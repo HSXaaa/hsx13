@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="hsx.com.dao.FaceRecordDao">
+
+  <resultMap type="FaceRecord" id="FaceRecordResult">
+	<result property="id" column="id"/>
+	<result property="personId" column="personId"/>
+	<result property="deviceKey" column="deviceKey"/>
+	<result property="type" column="type"/>
+	<result property="ip" column="ip"/>
+	<result property="time" column="time"/>
+	<result property="path" column="path"/>
+  </resultMap>
+	
+  <insert id="facerecordsetup">
+   insert into record (personId,deviceKey,type,ip,time,path) values (#{personId},#{deviceKey},#{type},#{ip},#{time},#{path})
+  </insert> 
+   
+</mapper> 
